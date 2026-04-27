@@ -11,7 +11,7 @@ const FADE_OUT_LEAD = 0.55;
 
 export default function FadingVideo({ src, className, style }: FadingVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const rafIdRef = useRef<number>();
+  const rafIdRef = useRef<number | null>(null);
   const fadingOutRef = useRef(false);
 
   const fadeTo = (target: number, duration: number) => {
